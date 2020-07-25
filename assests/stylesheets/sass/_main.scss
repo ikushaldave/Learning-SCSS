@@ -1,0 +1,188 @@
+// Hero
+
+.hero-text {
+	text-align: center;
+	order: 1;
+
+	& * {
+		margin: 1rem auto;
+
+		@media screen and (min-width: 800px) {
+			margin: 1.5rem auto;
+		}
+	}
+
+	@media screen and (min-width: 800px) {
+		order: 0;
+	}
+}
+
+.hero-img {
+	img {
+		width: 100%;
+	}
+
+	@media screen and (min-width: 800px) {
+		padding: 2rem 0px 2rem 3rem;
+	}
+}
+
+// Link shorten
+
+.url-shorten {
+	position: relative;
+}
+
+.link-shorten {
+	background: $secondary-color url(/assests/images/bg-shorten-mobile.svg)
+		no-repeat 100% 0;
+	border-radius: 10px;
+	padding: 1rem;
+	position: absolute;
+	top: -80px;
+	left: 0.5rem;
+	right: 0.5rem;
+
+	@media screen and (min-width: 800px) {
+		background: $secondary-color url(/assests/images/bg-shorten-desktop.svg)
+			no-repeat;
+		background-size: cover;
+		top: -60px;
+		left: 2rem;
+		right: 2rem;
+	}
+
+	& * {
+		margin: 0.5rem auto;
+	}
+
+	.url,
+	.shorten-it {
+		@include font(500);
+		font-size: 1rem;
+		padding: 0.8rem;
+		border-radius: 8px;
+		border: none;
+		color: $link-color;
+	}
+
+	.shorten-it {
+		background-color: $primary-color;
+		color: #fff;
+	}
+}
+
+// Feature
+
+.feature {
+	background-color: hsl(230, 25%, 95%);
+	padding-top: 8rem;
+	text-align: center;
+
+	.container {
+		margin-bottom: 0;
+	}
+
+	& * {
+		margin: 1rem auto;
+	}
+
+	@media screen and (min-width: 800px) {
+		padding-top: 5rem;
+	}
+
+	.cards {
+		margin-top: 4rem;
+		position: relative;
+
+		@media screen and (min-width: 800px) {
+			margin-top: 0;
+		}
+	}
+
+	hr {
+		position: absolute;
+		z-index: 0;
+		border: none;
+		border: 5px solid $secondary-color;
+		transform: rotate(90deg);
+		width: 180%;
+
+		@media screen and (min-width: 600px) and (max-width: 800px) {
+			width: 100%;
+		}
+
+		@media screen and (min-width: 800px) {
+			transform: rotate(0deg);
+			width: 80%;
+			left: 1rem;
+		}
+	}
+}
+
+.card {
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 1rem;
+	position: relative;
+	z-index: 1;
+	box-shadow: 0 1px 1px 0 rgba($color: #fff, $alpha: 0.5);
+	margin: 3rem auto;
+
+	@media screen and (min-width: 800px) {
+		margin: -5rem auto 0;
+
+		&:nth-child(2) {
+			margin-top: 2rem;
+		}
+
+		&:nth-child(4) {
+			margin-top: 10rem;
+		}
+	}
+
+	div {
+		position: relative;
+		top: -4.5rem;
+		left: 0;
+		width: 6rem;
+		height: 6rem;
+		border-radius: 50%;
+		background-color: $secondary-color;
+	}
+
+	h3 {
+		margin-top: -2rem;
+
+		@media screen and (min-width: 800px) {
+			margin-bottom: 2.5rem;
+		}
+	}
+
+	p {
+		@media screen and (min-width: 800px) {
+			margin-top: -3rem;
+		}
+	}
+}
+
+// cta
+
+.cta {
+	text-align: center;
+	padding: 3rem 1.2rem;
+	background: $secondary-color url(/assests/images/bg-boost-mobile.svg)
+		no-repeat;
+
+	@media screen and (min-width: 800px) {
+		background: $secondary-color url(/assests/images/bg-boost-desktop.svg)
+			no-repeat;
+		background-size: cover;
+	}
+
+	& * {
+		margin: 1.2rem auto;
+		color: #fff;
+		font-size: 2rem;
+	}
+}

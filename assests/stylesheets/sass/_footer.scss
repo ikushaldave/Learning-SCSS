@@ -1,0 +1,55 @@
+footer {
+	background-color: hsl(266, 10%, 14%);
+}
+
+.footer {
+	@media screen and (min-width: 800px) {
+		@include flex(row, space-between, flex-start);
+	}
+	.flex-col {
+		@media screen and (min-width: 800px) {
+			@include flex(row, space-between, flex-start);
+		}
+	}
+}
+
+.footer-figure {
+	margin: 2rem auto;
+}
+
+.footer-nav {
+	text-align: center;
+	@media screen and (min-width: 800px) {
+		flex: 1 1 auto;
+		text-align: left;
+	}
+
+	ul {
+		margin: 1rem auto;
+	}
+
+	li {
+		margin: 0.8rem auto;
+
+		& a {
+			color: $text-color;
+		}
+	}
+
+	h3 {
+		color: #fff;
+		margin: 1rem;
+
+		@media screen and (min-width: 800px) {
+			margin: 1rem 0;
+		}
+	}
+}
+
+.social-icon {
+	a {
+		color: #ffffff;
+		font-size: 1.5rem;
+		margin: 2rem 1rem;
+	}
+}

@@ -1,0 +1,81 @@
+.header {
+	.bar {
+		font-size: 1.5rem;
+		color: $link-color;
+		cursor: pointer;
+	}
+
+	#bar,
+	.nav {
+		display: none;
+	}
+
+	#bar:checked ~ .nav {
+		display: inline-block;
+		position: absolute;
+		top: 6rem;
+		left: 1.5rem;
+		right: 1.5rem;
+		z-index: 1;
+		border-radius: 10px;
+		background-color: $secondary-color;
+	}
+
+	.nav-items,
+	.nav-login {
+		margin-top: 2rem;
+		width: 80%;
+	}
+
+	.nav-items {
+		border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
+	}
+
+	.nav-item {
+		margin-bottom: 2rem;
+	}
+
+	.nav-item a {
+		color: #fff;
+	}
+
+	.nav-item a:hover {
+		color: #000;
+	}
+
+	@media screen and (min-width: 800px) {
+		#bar,
+		.bar {
+			display: none;
+		}
+
+		.nav {
+			display: block;
+			flex: 1 1 auto;
+		}
+
+		.nav-items,
+		.nav-login {
+			margin-top: 0;
+			width: auto;
+		}
+
+		.nav-items {
+			margin-left: 3rem;
+		}
+
+		.nav-item {
+			margin-bottom: 0;
+			margin-left: 2.5rem;
+		}
+
+		.nav-item a {
+			font-size: 0.9rem;
+			color: $link-color;
+		}
+
+		.nav-item .btn {
+			color: #fff;
+		}
+	}
+}
